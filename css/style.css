@@ -1,25 +1,168 @@
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-@media screen and (max-width: 768px) {
-  .section {
-    width: 90% !important;
-    height: auto !important;
-    border-radius: 15px !important;
-  }
 
-  .section:hover {
-    width: 90% !important;
-    height: auto !important;
-  }
-
-  .section-container {
-    flex-direction: column;
-    align-items: center;
-  }
+body {
+  font-family: 'Georgia', serif;
+  color: #2c1f0c;
+  background: url('https://tse4.mm.bing.net/th/id/OIP.VkEpc7hB_jeIdO99iPPw2QHaE8?pid=Api&P=0&h=220') no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: rgba(255, 248, 220, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Section Container - Random Circles Layout */
+.section-container {
+  position: relative;
+  height: 200vh;
+  width: 100%;
+  overflow: visible;
+}
+
+.section {
+  position: absolute;
+  background-color: rgba(255, 248, 220, 0.9);
+  border-radius: 50%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  animation: float 6s ease-in-out infinite;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Section Hover */
+.section:hover {
+  border-radius: 25px;
+  background-color: #ffffff;
+  z-index: 5;
+  min-height: 350px;
+  overflow: visible;
+  width: auto !important;
+  height: auto !important;
+}
+
+.section:hover h2 {
+  top: 20px;
+  left: 20px;
+  transform: none;
+}
+
+.section p,
+.section ul,
+.section a,
+.section form {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 2;
+}
+
+.section:hover p,
+.section:hover ul,
+.section:hover a,
+.section:hover form {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Position and Size Randomization */
+.section:nth-child(1) {
+  top: 5%;
+  left: 10%;
+  width: 200px;
+  height: 200px;
+}
+
+.section:nth-child(2) {
+  top: 30%;
+  left: 60%;
+  width: 300px;
+  height: 300px;
+}
+
+.section:nth-child(3) {
+  top: 70%;
+  left: 20%;
+  width: 250px;
+  height: 250px;
+}
+
+.section:nth-child(4) {
+  top: 40%;
+  left: 80%;
+  width: 220px;
+  height: 220px;
+}
+
+/* Contact Form Styling */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Georgia', serif;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #5a2f0c;
+}
+
 .resume-button {
   display: inline-block;
   margin-top: 10px;
@@ -35,103 +178,6 @@
   background-color: #5a2f0c;
 }
 
-
-
-body {
-  font-family: 'Georgia', serif;
-  color: #2c1f0c;
-  background: url('https://images.unsplash.com/photo-1567852189309-da9677209361?w=1600&auto=format&fit=crop&q=60') no-repeat center center fixed;
-  background-size: cover;
-  padding: 20px;
-  line-height: 1.6;
-}
-
-/* Header */
-header {
-  text-align: center;
-  margin-bottom: 40px;
-  background-color: rgba(255, 248, 220, 0.8);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-style: italic;
-  font-size: 1.1rem;
-}
-
-/* Section container */
-.section-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-/* Circle section */
-.section {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  background-color: rgba(255, 248, 220, 0.9);
-  border-radius: 50%;
-  padding: 20px;
-  text-align: center;
-  overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transition: all 0.5s ease;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-/* Title */
-.section h2 {
-  font-size: 1.5rem;
-  transition: opacity 0.3s ease;
-}
-
-/* Hidden content initially */
-.section p,
-.section ul,
-.section a {
-  opacity: 0;
-  max-height: 0;
-  transition: opacity 0.5s ease, max-height 0.5s ease;
-  overflow: hidden;
-}
-
-/* Expand and reveal on hover */
-.section:hover {
-  width: 350px;
-  height: 350px;
-  border-radius: 25px;
-  padding: 30px;
-  background-color: #ffffff; /* white on hover */
-  z-index: 2;
-}
-
-/* Hide title when hovered */
-.section:hover h2 {
-  opacity: 0;
-}
-
-/* Show content when hovered */
-.section:hover p,
-.section:hover ul,
-.section:hover a {
-  opacity: 1;
-  max-height: 1000px;
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -140,4 +186,39 @@ footer {
   padding: 10px;
   border-radius: 10px;
   font-size: 0.9rem;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-container {
+    height: auto;
+  }
+
+  .section {
+    position: relative;
+    margin: 20px auto;
+    top: auto !important;
+    left: auto !important;
+    width: 90% !important;
+    height: auto !important;
+    border-radius: 20px;
+    animation: none;
+  }
+
+  .section h2 {
+    position: static;
+    transform: none;
+  }
+
+  .section:hover h2 {
+    position: static;
+  }
 }
