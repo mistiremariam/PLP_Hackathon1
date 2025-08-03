@@ -1,81 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-
-  <!-- Paste the link to your CSS file here -->
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mistiremariam Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.ico" />
+<meta name="description" content="Mistiremariam Girma's Portfolio">
+<meta name="author" content="Mistiremariam Girma">
 </head>
 <body>
   <header>
-    <nav>
-      <h1>Your Name</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Mistiremariam Getahun Girma</h1>
+    <p id="typewriter"></p>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi! I’m Mistiremariam Getahun Girma, a passionate Mechanical Engineer dedicated to building creative and functional web experiences.</p>
-  </section>
+  <main class="section-container">
 
-  <section id="education">
-    <h2>Educational Background</h2>
-    <p>I hold a Bachelors degree from Addis Ababa Univesity.</p>
-    <a href="#" class="button">Download My CV</a>
-  </section>
+    <!-- About Me -->
+    <section class="section">
+      <h2>About Me</h2>
+      <p>
+        I'm a mechanical engineering student passionate about space science, sustainability, and empowering women in STEM. I strive to blend creativity with engineering solutions.
+      </p>
+    </section>
 
-  <section id="interests">
-    <h2>Interests</h2>
-    <ul>
-      <li>🌍 Climate Tech & Innovation</li>
-      <li>💻 Frontend & Backend Web Development</li>
-      <li>🚀 Space Science & Engineering</li>
-      <li>🎨 Creative Storytelling through Tech</li>
-    </ul>
-  </section>
+    <!-- Education -->
+    <section class="section">
+      <h2>Education</h2>
+      <ul>
+        <li>Addis Ababa University</li>
+        <li>School of Mechanical and Industrial Engineering</li>
+        <li>Expected Graduation: 2026</li>
+      </ul>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project 1: [Project Name]</h3>
-      <p>A brief description of the project, what it does, and what tools you used.</p>
-      <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
-    </div>
-    <div class="project">
-      <h3>Project 2: [Project Name]</h3>
-      <p>Another brief description, including challenges solved or user benefit.</p>
-      <p><strong>Tech Stack:</strong> [Frameworks, APIs, etc.]</p>
-    </div>
-  </section>
+    <!-- Projects -->
+    <section class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li>Zelaki Plastic Recycling Initiative</li>
+        <li>Centrifugal Pump Impeller Design</li>
+        <li>Mining Automation Safety Research</li>
+      </ul>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="#" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+    <!-- Certifications -->
+    <section class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Python & Data Science – INFNOVA</li>
+        <li>Cybersecurity – ADBI</li>
+        <li>HVAC – ESME</li>
+        <li>Canva Essentials & Pro</li>
+      </ul>
+    </section>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+    <!-- Activities -->
+    <section class="section">
+      <h2>Activities</h2>
+      <ul>
+        <li>She's Beyond Ambassador</li>
+        <li>Abugida Robotics Intern</li>
+        <li>ESSS Presenter 2025</li>
+        <li>Space Generation Advisory Council Member</li>
+      </ul>
+    </section>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+    <!-- Contact -->
+    <section class="section">
+      <h2>Contact</h2>
+      <p> Phone Number: +251978103566</p>
+      <p>
+        Email: <a href="mailto:mistiremariamgirma@gmail.com">mistiremariamgirma@gmail.com</a>
+      </p>
+      <p>Institutional Email: <a href="mailto:mistiremariam.getahun-ug@aau.edu.et">mistiremariam.getahun-ug@aau.edu.et</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/mistiremariam-girma-91875a18a/" target="_blank">mistiremariam</a></p>
+      <p>
+        GitHub: <a href="https://github.com/mistiremariam" target="_blank">mistiremariam</a>
+      </p>
+      <p><a href="assets/Resume Original.docx" download class="resume-button">Download My Resume</a></p>
+    </section>
 
-      <button type="submit">Send</button>
-    </form>
-  </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Mistiremariam Getahun Girma. All rights reserved.</p>
+    <p>© 2025 Mistiremariam Girma. All rights reserved.</p>
   </footer>
+  <script>
+  const texts = ["Mechanical Engineer", "Space Enthusiast", "STEM Advocate"];
+  let count = 0;
+  let index = 0;
+  let currentText = "";
+  let letter = "";
+
+  function type() {
+    if (count === texts.length) {
+      count = 0;
+    }
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    document.getElementById("typewriter").textContent = letter;
+    if (letter.length === currentText.length) {
+      count++;
+      index = 0;
+      setTimeout(type, 1000); // wait before next word
+    } else {
+      setTimeout(type, 100);
+    }
+  }
+
+  type();
+</script>
+  <script src="js/script.js"></script>
+  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
 </body>
 </html>
