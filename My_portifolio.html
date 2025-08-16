@@ -2,124 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mistiremariam Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="assets/favicon.ico" />
-<meta name="description" content="Mistiremariam Girma's Portfolio">
-<meta name="author" content="Mistiremariam Girma">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mistiremariam Girma - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- ===== NAVIGATION ===== -->
   <header>
-    <h1>Mistiremariam Getahun Girma</h1>
-    <p id="typewriter"></p>
+    <nav class="navbar">
+      <div class="logo">MyPortfolio</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="section-container">
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hello, I'm <span>Mistiremariam Girma</span></h1>
+        <h2>Aspiring Engineer | Space Enthusiast | Writer</h2>
+        <p>
+          Welcome to my portfolio! I am a mechanical engineering student passionate about engineering, space
+          science, and creative problem-solving. Scroll down to explore my
+          achievements and works.
+        </p>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Me -->
-    <section class="section">
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="about">
+    <div class="container">
       <h2>About Me</h2>
       <p>
-        I'm a mechanical engineering student passionate about space science, sustainability, and empowering women in STEM. I strive to blend creativity with engineering solutions.
+        I am a mechanical engineering student with a deep interest in aerospace
+        and space science. Over the years, I have worked on various projects,
+        led initiatives, and written for recognized organizations. My vision is
+        to inspire young people, especially women, to pursue STEM and explore
+        the limitless potential of space exploration.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- Education -->
-    <section class="section">
-      <h2>Education</h2>
-      <ul>
-        <li>Addis Ababa University</li>
-        <li>School of Mechanical and Industrial Engineering</li>
-        <li>Expected Graduation: 2027</li>
-      </ul>
-    </section>
+  <!-- ===== CERTIFICATES SECTION ===== -->
+  <section id="certificates" class="certificates">
+    <div class="container">
+      <h2>Certificates</h2>
+      <div class="certificate-list">
+        <div class="certificate-item">
+          <h3>Canva Essentials</h3>
+          <p>Issued by Canva – July 2025 (Credential ID: 6a1dba)</p>
+        </div>
+        <div class="certificate-item">
+          <h3>Python Programming & Data Science</h3>
+          <p>Issued by INFNOVA Technologies – July 2025</p>
+        </div>
+        <div class="certificate-item">
+          <h3>Cybersecurity</h3>
+          <p>Asian Development Bank Institute (ADBI) – June 2025</p>
+        </div>
+        <!-- Add more as needed -->
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects -->
-    <section class="section">
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects" class="projects">
+    <div class="container">
       <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project-item">
+          <h3>Zelaki Project</h3>
+          <p>
+            A student-led sustainability initiative focusing on plastic recycling
+            and environmental awareness.
+          </p>
+        </div>
+        <div class="project-item">
+          <h3>Centrifugal Pump Impeller Design</h3>
+          <p>
+            Designed and documented a casting process for a centrifugal pump
+            impeller using SolidWorks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Let's connect and work on impactful projects together!</p>
       <ul>
-        <li>Zelaki Plastic Recycling Initiative</li>
-        <li>Centrifugal Pump Impeller Design</li>
-        <li>Mining Automation Safety Research</li>
-        <li>Arduino integrated Coeffiecient of friction measuring device</li>
+        <li>Email: <a href="mailto:mistiremariam@example.com">mistiremariam@example.com</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/mistiremariam">linkedin.com/in/mistiremariam</a></li>
+        <li>GitHub: <a href="https://github.com/mistiremariam">github.com/mistiremariam</a></li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <!-- Certifications -->
-    <section class="section">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Python & Data Science – INFNOVA</li>
-        <li>Cybersecurity – ADBI</li>
-        <li>HVAC – ESME</li>
-        <li>Canva Essentials & For Work</li>
-        <li>Introduction to Aviation Leasing</li>
-        <li>Yale Young African Scholars</li>
-
-      </ul>
-    </section>
-
-    <!-- Activities -->
-    <section class="section">
-      <h2>Activities</h2>
-      <ul>
-        <li>She's Beyond Ambassador</li>
-        <li>Abugida Robotics Intern</li>
-        <li>ESSS Presenter 2025</li>
-        <li>Space Generation Advisory Council Member</li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section class="section">
-      <h2>Contact</h2>
-      <p> Phone Number: +251978103566</p>
-      <p>
-        Email: <a href="mailto:mistiremariamgirma@gmail.com">mistiremariamgirma@gmail.com</a>
-      </p>
-      <p>Institutional Email: <a href="mailto:mistiremariam.getahun-ug@aau.edu.et">mistiremariam.getahun-ug@aau.edu.et</a></p>
-  <p>
-    LinkedIn: <a href="https://www.linkedin.com/in/mistiremariam-girma-91875a18a/" target="_blank">mistiremariam</a>
-  </p>
-      <p>
-        GitHub: <a href="https://github.com/mistiremariam" target="_blank">mistiremariam</a>
-      </p>
-      <p><a href="assets/Resume Original.docx" download class="resume-button">Download My Resume</a></p>
-    </section>
-
-  </main>
-
+  <!-- ===== FOOTER ===== -->
   <footer>
-    <p>© 2025 Mistiremariam Girma. All rights reserved.</p>
+    <p>&copy; 2025 Mistiremariam Girma | All Rights Reserved</p>
   </footer>
-  <script>
-  const texts = ["Mechanical Engineer", "Space Enthusiast", "STEM Advocate"];
-  let count = 0;
-  let index = 0;
-  let currentText = "";
-  let letter = "";
+  <script src="script.js"></script>
 
-  function type() {
-    if (count === texts.length) {
-      count = 0;
-    }
-    currentText = texts[count];
-    letter = currentText.slice(0, ++index);
-
-    document.getElementById("typewriter").textContent = letter;
-    if (letter.length === currentText.length) {
-      count++;
-      index = 0;
-      setTimeout(type, 1000); // wait before next word
-    } else {
-      setTimeout(type, 100);
-    }
-  }
-
-  type();
-</script>
-  <script src="js/script.js"></script>
-  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
 </body>
 </html>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+  header {
+    background: #333;
+    color: #fff;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-left: 20px;
+  }
+
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  .hero h1 span {
+    color: #ff6347; /* Tomato color */
+  }
+
+  .btn {
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .about, .certificates, .projects, .contact {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
