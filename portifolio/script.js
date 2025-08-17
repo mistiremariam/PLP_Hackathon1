@@ -1,8 +1,6 @@
-// script.js
-
-// Smooth scroll effect for navigation links
+// ===== Smooth Scroll =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
@@ -10,32 +8,50 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Dark/Light mode toggle
-const toggleBtn = document.createElement("button");
-toggleBtn.innerText = "Toggle Dark Mode";
-toggleBtn.style.position = "fixed";
-toggleBtn.style.bottom = "20px";
-toggleBtn.style.right = "20px";
-document.body.appendChild(toggleBtn);
+// ===== Scroll Reveal Animation =====
+const revealElements = document.querySelectorAll('.section, .card');
 
-toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
+function revealOnScroll() {
+    for (let i = 0; i < revealElements.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = revealElements[i].getBoundingClientRect().top;
+        let elementVisible = 120; // adjust sensitivity
+
+        if (elementTop < windowHeight - elementVisible) {
+            revealElements[i].classList.add('active');
+        } else {
+            revealElements[i].classList.remove('active');
+        }
+    }
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll(); // run on load
+
+// ===== Dark/Light Mode Toggle =====
+const toggleButton = document.createElement('button');
+toggleButton.innerText = "🌙";
+toggleButton.classList.add('dark-toggle');
+document.body.appendChild(toggleButton);
+
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+        toggleButton.innerText = "☀️";
+    } else {
+        toggleButton.innerText = "🌙";
+    }
 });
-// CSS for dark mode
-const style = document.createElement('style');
-style.innerHTML = `
-    body.dark-mode {
-        background-color: #121212;
-        color: #ffffff;
-    }
-    .header {
-        background: linear-gradient(to right, #4a90e2, #9013fe);
-    }
-    .certificates {
-        background: #1e1e1e;
-    }
-    .certificate {
-        background: #2a2a2a;
-    }
-`;
-document.head.appendChild(style);
+
+// ===== Hover Effect on Cards =====
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = "translateY(-8px) scale(1.03)";
+        card.style.transition = "0.3s";
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = "translateY(0) scale(1)";
+    });
+});
