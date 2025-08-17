@@ -1,71 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certificates | Mistiremariam Girma</title>
- 
-  <link rel="stylesheet" href="../css/style.css">
-<script defer src="../js/script.js"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certificates — Mistiremariam Girma</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">Mistiremariam</div>
-
-  
-  <ul>
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../about/about.html">About</a></li>
-    <li><a href="certificates.html" class="active">Certificates</a></li>
-    <li><a href="../contact/contact.html">Contact</a></li>
-    <li><a href="../projects/projects.html">Projects</a></li>
-  </ul>
-</nav>
-      
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="certificates.html" class="active">Certificates</a></li>
+        <li><a href="../projects/projects.html">Projects</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Certificates Section -->
-  <section class="certificates-section">
-    <div class="container">
-      <h1>My Certificates</h1>
-      <p>
-        Over the years, I have earned several certificates across engineering, 
-        technology, space science, and leadership programs.  
-        Here are some highlights:
-      </p>
+  <main>
+    <section class="section certificates">
+      <div class="container">
+        <h1 class="h2">My Certificates</h1>
+        <p class="lead">Here are some of my achievements and completed programs. Click on a certificate to view it.</p>
 
-      <!-- Certificates Grid -->
-      <div class="certificates-grid">
-        <!-- Certificate 1 -->
-        <div class="certificate-card" onclick="openModal('img/certificates/canva-essentials.jpg')">
-          <img src="img/certificates/canva-essentials.jpg" alt="Canva Essentials Certificate">
-          <h3>Canva Essentials</h3>
-          <p>Canva – July 2025</p>
+        <div class="certificates-list">
+          <!-- Certificate Item -->
+          <div class="certificate-item">
+            <div class="certificate-details">
+              <h3 class="cert-title">Canva Essentials</h3>
+              <p class="cert-description">Demonstrating proficiency in Canva basics for design and digital content creation.</p>
+            </div>
+            <div class="certificate-preview">
+              <iframe src="../assets/mistiremariam-girma-canva-essentials-certificate.pdf" width="100%" height="300px"></iframe>
+            </div>
+          </div>
+
+          <div class="certificate-item">
+            <div class="certificate-details">
+              <h3 class="cert-title">Python Programming & Data Science</h3>
+              <p class="cert-description">Completion of a program on Python programming and data analysis skills.</p>
+            </div>
+            <div class="certificate-preview">
+              <iframe src="../assets/Mistiremariam Getahun Girma (1).pdf" width="100%" height="300px"></iframe>
+            </div>
+          </div>
+
+          <div class="certificate-item">
+            <div class="certificate-details">
+              <h3 class="cert-title">Cybersecurity</h3>
+              <p class="cert-description">Knowledge in cybersecurity principles and practices.</p>
+            </div>
+            <div class="certificate-preview">
+              <iframe src="../assets/Mistiremariam-Girma–Cybersecurity–Cybersecurity–ADBI-E-Learning.pdf" width="100%" height="300px"></iframe>
+            </div>
+          </div>
         </div>
-
-        <!-- Certificate 2 -->
-        <div class="certificate-card" onclick="openModal('img/certificates/cybersecurity.jpg')">
-          <img src="img/certificates/cybersecurity.jpg" alt="Cybersecurity Certificate">
-          <h3>Cybersecurity</h3>
-          <p>ADBI – June 2025</p>
-        </div>
-
-        <!-- Certificate 3 -->
-        <div class="certificate-card" onclick="openModal('img/certificates/python.jpg')">
-          <img src="img/certificates/python.jpg" alt="Python Programming Certificate">
-          <h3>Python Programming</h3>
-          <p>INFNOVA – July 2025</p>
-        </div>
-
-        <!-- Certificate 4 -->
-        <div class="certificate-card" onclick="openModal('img/certificates/hvac.jpg')">
-          <img src="img/certificates/hvac.jpg" alt="HVAC Certificate">
-          <h3>HVAC</h3>
-          <p>ESME – April 2025</p>
-        </div>
-
-        <!-- Add more certificates as needed -->
       </div>
-    </div>
-</section>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mistiremariam Girma | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
