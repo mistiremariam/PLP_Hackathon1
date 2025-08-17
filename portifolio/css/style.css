@@ -1,90 +1,53 @@
-/* Base Setup */
-* {
+/* style.css */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9f9fa;
+  background: #f9f9f9;
   color: #333;
-  line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
-/* Hero Section */
-header {
+header, nav, footer {
   background: #222;
-  color: #f9f9fa;
-  padding: 4rem 1rem;
-  text-align: center;
-}
-header .profile-pic {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 5px solid #f9f9fa;
-  margin-bottom: 1rem;
-}
-header .name {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-header .tagline {
-  font-size: 1.2rem;
-  opacity: 0.8;
-}
-
-/* Certificates Section */
-.certificates {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-}
-.certificates h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #222;
-  text-align: center;
-}
-
-/* Card Style */
-.certificate {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  display: flex;
-  align-items: center;
+  color: white;
   padding: 1rem;
-  margin-bottom: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.certificate:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-.certificate .cert-info h3 {
-  margin-bottom: 0.3rem;
-  font-size: 1.2rem;
-  color: #222;
-}
-.certificate .cert-info p {
-  color: #555;
-  font-size: 0.95rem;
+  text-align: center;
 }
 
-/* Responsive Grid (Optional) */
-@media (min-width: 600px) {
-  .certificate {
-    padding: 1.5rem;
-  }
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
-@media (max-width: 500px) {
-  header .profile-pic {
-    width: 120px;
-    height: 120px;
-  }
-  header .name {
-    font-size: 2rem;
-  }
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff9800;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  color: #222;
+}
+
+footer {
+  margin-top: 2rem;
 }
